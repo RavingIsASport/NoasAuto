@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "deploy": "ng build --prod && railway deploy",
+    "start": "npx http-server dist/your-app-name -p 8080",
+    "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
