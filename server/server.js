@@ -4,6 +4,7 @@ import cors from "cors";
 import routes from "./controllers/index.js";
 import db from "./config/connection.js";
 import dotenv from "dotenv";
+import path from "path";
 
 dotenv.config();
 
@@ -19,7 +20,6 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Routes
 app.use("/api", routes);
 
-const path = require("path");
 app.use(express.static(path.join(__dirname, "dist/your-angular-app")));
 
 app.get("*", (req, res) => {
