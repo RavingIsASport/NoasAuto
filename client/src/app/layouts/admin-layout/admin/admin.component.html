@@ -1,0 +1,54 @@
+<header>
+  <h1>Noas Auto Sales</h1>
+  <button id="logoutBtn" (click)="logout()">Logout</button>
+</header>
+<h2 id="manager">Welcome {{ manager }}!</h2>
+<main id="adminMain">
+  <!-- Form to add vehicle -->
+  <div id="addCarForm">
+    <form id="addCar" [formGroup]="carForm" (ngSubmit)="addCar()">
+      <label for="year">Year:</label>
+      <input type="text" id="year" formControlName="year" required />
+
+      <label for="make">Make:</label>
+      <input type="text" id="make" formControlName="make" required />
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" formControlName="model" required />
+
+      <label for="images">Upload images:</label>
+      <input
+        type="file"
+        name="images"
+        formControlName="images"
+        (change)="fileChange($event)"
+        multiple
+      />
+
+      <button type="submit">Add Car</button>
+    </form>
+    <div id="carFile" *ngFor="let img of newCar.images">
+      <p>{{ img.name }}</p>
+    </div>
+  </div>
+
+  <!-- table to show cars  -->
+  <h3 id="adminH3">Inventory</h3>
+  <p *ngIf="!cars.length">{{ errorMsg }}</p>
+  <table *ngIf="cars.length > 0">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Make</th>
+        <th>Model</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let car of cars">
+      <td>{{ car.year }}</td>
+      <td>{{ car.make | titlecase }}</td>
+      <td>{{ car.model | titlecase }}</td>
+
+      <button id="deleteBtn" (click)="deleteCar(car._id)">Delete</button>
+    </tr>
+  </table>
+</main>

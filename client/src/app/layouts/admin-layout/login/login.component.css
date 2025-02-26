@@ -1,0 +1,53 @@
+header {
+  padding: 10px 20px;
+  background-color: #3029c2;
+  color: white;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+div {
+  border: #3029c2 1px solid;
+  border-radius: 5px;
+  width: 30%;
+  padding: 3%;
+}
+p {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+button {
+  padding: 10px;
+  background-color: #3029c2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#errorP {
+  color: red;
+  margin-top: 20px;
+  font-weight: normal;
+}

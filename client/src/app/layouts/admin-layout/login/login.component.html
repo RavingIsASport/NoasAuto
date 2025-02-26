@@ -1,0 +1,21 @@
+<header><h1>Noas Auto Sales</h1></header>
+<main>
+  <div>
+    <p>Login</p>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <label for="username">Username</label>
+      <input type="text" formControlName="username" required />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        formControlName="password"
+        required
+        autocomplete="off"
+      />
+
+      <button type="submit">Login</button>
+    </form>
+    <p id="errorP" *ngIf="err === true">{{ errorMsg }}</p>
+  </div>
+</main>
