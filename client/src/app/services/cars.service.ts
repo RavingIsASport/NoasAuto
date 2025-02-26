@@ -8,7 +8,9 @@ export class CarsService {
 
   // get cars
   async getCars() {
-    let response = await fetch('http://localhost:3001/api/cars');
+    let response = await fetch(
+      'https://backend-production-136c.up.railway.app/api/cars'
+    );
     let data = await response.json();
     return data;
   }
@@ -21,19 +23,25 @@ export class CarsService {
       year: car.year,
       images: car.images,
     };
-    return await fetch('http://localhost:3001/api/cars', {
-      method: 'POST',
-      body: JSON.stringify(newCar),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    return await fetch(
+      'https://backend-production-136c.up.railway.app/api/cars',
+      {
+        method: 'POST',
+        body: JSON.stringify(newCar),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
   }
 
   // delete car
   async deleteCar(id: number) {
-    return await fetch(`http://localhost:3001/api/cars/${id}`, {
-      method: 'DELETE',
-    });
+    return await fetch(
+      `https://backend-production-136c.up.railway.app/api/cars/${id}`,
+      {
+        method: 'DELETE',
+      }
+    );
   }
 }
