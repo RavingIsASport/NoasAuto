@@ -19,6 +19,13 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Routes
 app.use("/api", routes);
 
+const path = require("path");
+app.use(express.static(path.join(__dirname, "dist/your-angular-app")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist/your-angular-app/index.html"));
+});
+
 // Database connection event handling
 db.on("error", (err) => {
   console.error("MongoDB connection error:", err);
