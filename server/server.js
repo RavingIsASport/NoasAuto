@@ -23,10 +23,11 @@ app.use("/api", routes);
 
 // Serve Angular app
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-app.use(express.static(path.join(__dirname, "dist/noas-auto/browser")));
+const angularDistPath = path.join(__dirname, "dist", "noas-auto", "browser");
+app.use(express.static(angularDistPath));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/noas-auto/browser", "index.html"));
+  res.sendFile(path.join(angularDistPath, "index.html"));
 });
 
 // Database connection event handling
