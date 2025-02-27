@@ -26,7 +26,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 app.use(express.static(path.join(__dirname, "dist/noas-auto")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/noas-auto", "index.html"));
+  res.sendFile(path.join(__dirname, "dist/noas-auto/browser", "index.html"));
 });
 
 // Database connection event handling
