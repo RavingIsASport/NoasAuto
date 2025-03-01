@@ -4,8 +4,8 @@ import cors from "cors";
 import routes from "./controllers/index.js";
 import db from "./config/connection.js";
 import dotenv from "dotenv";
-// import path from "path";
-// import { fileURLToPath } from "url";
+import path from "path";
+import { fileURLToPath } from "url";
 
 dotenv.config();
 
@@ -21,14 +21,14 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 // Routes
 app.use("/api", routes);
 
-// // Serve Angular app
-// const __dirname = path.dirname(fileURLToPath(import.meta.url));
-// const angularDistPath = path.join(__dirname, "dist", "noas-auto", "browser");
-// app.use(express.static(angularDistPath));
+// Serve Angular app
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const angularDistPath = path.join(__dirname, "client/dist/noas-auto/browser");
+app.use(express.static(angularDistPath));
 
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(angularDistPath, "index.html"));
-// });
+app.get("*", (req, res) => {
+  res.sendFile(path.join(angularDistPath, "index.html"));
+});
 
 // Database connection event handling
 db.on("error", (err) => {
