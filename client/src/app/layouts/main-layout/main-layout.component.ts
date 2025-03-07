@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from './home/home.component';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-main-layout',
-  imports: [HomeComponent],
+  imports: [NavbarComponent, RouterOutlet],
   templateUrl: './main-layout.component.html',
   styleUrl: './main-layout.component.css',
 })

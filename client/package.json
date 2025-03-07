@@ -6,6 +6,7 @@
     "start": "npx serve -s dist/noas-auto/browser",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
+    "dev": "ng serve -o",
     "test": "ng test"
   },
   "private": true,
