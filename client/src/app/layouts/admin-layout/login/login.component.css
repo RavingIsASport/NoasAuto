@@ -1,6 +1,6 @@
 header {
   padding: 10px 20px;
-  background-color: #3029c2;
+  background-color: #3596b5;
   color: white;
 }
 main {
@@ -10,7 +10,7 @@ main {
   height: 80vh;
 }
 div {
-  border: #3029c2 1px solid;
+  border: #3596b5 1px solid;
   border-radius: 5px;
   width: 30%;
   padding: 3%;
@@ -40,11 +40,14 @@ input {
 }
 button {
   padding: 10px;
-  background-color: #3029c2;
+  background-color: #3596b5;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+button:hover {
+  background-color: #adc5cf;
 }
 #errorP {
   color: red;

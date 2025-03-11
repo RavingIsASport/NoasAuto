@@ -1,6 +1,6 @@
 header {
   padding: 10px 20px;
-  background-color: #3029c2;
+  background-color: #3596b5;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,7 @@ header {
   border-radius: 5px;
 }
 #logoutBtn:hover {
-  background-color: #5750ae;
+  background-color: #adc5cf;
   color: white;
 }
 #manager {
@@ -60,15 +60,17 @@ input {
 button {
   padding: 5px;
   font-size: 16px;
+  font-weight: bold;
   width: 20%;
-  background-color: #3029c2;
+  background-color: #3596b5;
   color: white;
   border: none;
   cursor: pointer;
   align-self: end;
 }
 button:hover {
-  background-color: #6e69ba;
+  background-color: #adc5cf;
+  color: black;
 }
 #adminH3 {
   margin-top: 20px;
@@ -96,4 +98,28 @@ td {
 }
 #deleteBtn:hover {
   background-color: #ff0000;
+}
+
+/* mobile view */
+@media screen and (max-width: 500px) {
+  #addCarForm {
+    flex-direction: column;
+  }
+  #addCar {
+    width: 100%;
+  }
+  label {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+  #logoutBtn {
+    padding: 0.5rem;
+    width: 15%;
+    font-size: 14px;
+  }
 }
