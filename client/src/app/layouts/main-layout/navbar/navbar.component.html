@@ -1,8 +1,16 @@
 <div id="navbar">
   <h1>Noas Autos</h1>
-  <div id="nav-links">
-    <a [routerLink]="['/']">Home</a>
-    <a [routerLink]="['/inventory']">Inventory</a>
-    <a [routerLink]="['/contact']">Contact</a>
+  <button
+    mat-mini-fab
+    aria-label="Mobile navbar toggle button"
+    (click)="navToggle()"
+  >
+    <mat-icon *ngIf="showIcon">menu_open</mat-icon>
+    <mat-icon *ngIf="!showIcon">close</mat-icon>
+  </button>
+  <div class="nav-links hidden" #navLinks>
+    <a (click)="navToggle()" [routerLink]="['/']">Home</a>
+    <a (click)="navToggle()" [routerLink]="['/inventory']">Inventory</a>
+    <a (click)="navToggle()" [routerLink]="['/contact']">Contact</a>
   </div>
 </div>

@@ -1,0 +1,86 @@
+/* Hero Section */
+.hero-section {
+  background: #adc5cf; /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Button Styles */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #845ec2; /* Red or a color you prefer */
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #6c4f8d;
+  transform: translateY(-5px);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #845ec2;
+  color: #845ec2;
+}
+
+.secondary-btn:hover {
+  background-color: #6c4f8d;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* mobile view */
+@media screen and (max-width: 500px) {
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
