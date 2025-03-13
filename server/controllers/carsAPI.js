@@ -15,6 +15,20 @@ router
     }
     res.json(cars);
   })
+  .get("/:id", async (req, res) => {
+    // get car ID from request parameters
+    let idNum = req.params.id;
+    // get the car details from the database
+    let car = await Car.findById(idNum);
+    // if no car is found, return a 404 error
+    if (!car) {
+      return res.status(404).send({ error: "Car not found" });
+    }
+    // return the car details
+    res.json(car);
+
+    console.log("Car to get", idNum);
+  })
   .post("/", async (req, res) => {
     // get the car details from the request body
     let { year, make, model, images } = req.body;

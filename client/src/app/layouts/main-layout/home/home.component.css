@@ -3,7 +3,7 @@
   background: #adc5cf; /* Replace with your image URL */
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +67,63 @@
   background-color: #6c4f8d;
   color: white;
   transform: translateY(-5px);
+}
+
+/* feature car section */
+.featuredCars {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+.featuredCars h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.featuredCars .vehicleCards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.vehicleCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.vehicleCard:hover {
+  transform: translateY(-5px);
+}
+.vehicleCard img {
+  width: 100%;
+  border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+}
+.vehicleCard h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.vehicleCard p {
+  font-size: 1rem;
+  color: #333;
+}
+.vehicleCard .btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #845ec2;
+  color: white;
+  padding: 12px 20px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.vehicleCard .btn:hover {
+  background-color: #6c4f8d;
 }
 
 /* mobile view */

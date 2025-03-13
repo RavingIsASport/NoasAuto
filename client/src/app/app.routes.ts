@@ -12,6 +12,7 @@ import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './layouts/main-layout/home/home.component';
 import { InventoryComponent } from './layouts/main-layout/inventory/inventory.component';
 import { ContactComponent } from './layouts/main-layout/contact/contact.component';
+import { CarPageComponent } from './layouts/main-layout/car-page/car-page.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,11 @@ export const routes: Routes = [
         path: 'inventory',
         component: InventoryComponent,
       },
+      {
+        path: 'inventory/:id',
+        component: CarPageComponent,
+      },
+
       {
         path: 'contact',
         component: ContactComponent,

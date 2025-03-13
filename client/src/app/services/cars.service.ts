@@ -35,6 +35,14 @@ export class CarsService {
     );
   }
 
+  async getCar(id: number) {
+    let response = await fetch(
+      `https://backend-production-136c.up.railway.app/api/cars/${id}`
+    );
+    let data = await response.json();
+    return data;
+  }
+
   // delete car
   async deleteCar(id: number) {
     return await fetch(
