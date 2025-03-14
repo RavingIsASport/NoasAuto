@@ -54,3 +54,12 @@ button:hover {
   margin-top: 20px;
   font-weight: normal;
 }
+@media screen and (max-width: 500px) {
+  div {
+    width: 70%;
+  }
+  button {
+    width: 50%;
+    place-self: center;
+  }
+}

@@ -13,15 +13,14 @@ export class HomeComponent {
   cars: any = [];
 
   // get cars from service on initial load
-  ngOnInit() {
-    this.getCars();
+  async ngOnInit() {
+    await this.getCars();
   }
 
   // Get cars
   async getCars() {
     await this.carsService.getCars().then((cars) => {
       this.cars = cars;
-      console.log(this.cars);
     });
   }
 }

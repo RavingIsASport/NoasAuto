@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { NgIf } from '@angular/common';
+
 @Component({
   selector: 'app-navbar',
   imports: [RouterLink, MatButtonModule, MatIconModule, NgIf],
@@ -12,7 +12,7 @@ import { NgIf } from '@angular/common';
 })
 export class NavbarComponent {
   // nav is used to toggle the mobile nav
-  @ViewChild('navLinks') nav!: ElementRef;
+  @ViewChild('navLinks') navLinks!: ElementRef;
 
   // renderer is used to add and remove classes
   constructor(private renderer: Renderer2) {}
@@ -23,11 +23,12 @@ export class NavbarComponent {
   // navToggle is used to toggle the
   // mobile nav when the icon is clicked
   navToggle() {
-    if (this.nav.nativeElement.classList.contains('hidden')) {
-      this.renderer.removeClass(this.nav.nativeElement, 'hidden');
+    // console.log(this.navLinks.nativeElement);
+    if (this.navLinks.nativeElement.classList.contains('hidden')) {
+      this.renderer.removeClass(this.navLinks.nativeElement, 'hidden');
       this.showIcon = false;
     } else {
-      this.renderer.addClass(this.nav.nativeElement, 'hidden');
+      this.renderer.addClass(this.navLinks.nativeElement, 'hidden');
       this.showIcon = true;
     }
   }

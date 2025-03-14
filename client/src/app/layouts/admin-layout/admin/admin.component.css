@@ -35,7 +35,6 @@ header {
 }
 #addCarForm {
   display: flex;
-
   gap: 10px;
   width: 100%;
 }
@@ -106,7 +105,8 @@ td {
     flex-direction: column;
   }
   #addCar {
-    width: 100%;
+    width: 60%;
+    justify-content: flex-start;
   }
   label {
     width: 100%;
@@ -114,8 +114,19 @@ td {
   input {
     width: 100%;
   }
+  #addCar select {
+    width: 50%;
+    font-size: 1.15rem;
+    cursor: pointer;
+  }
   button {
-    width: 100%;
+    width: 40%;
+    align-self: flex-start;
+    margin: 1rem 0;
+  }
+  #deleteBtn {
+    width: 55%;
+    margin: 4px;
   }
   #logoutBtn {
     padding: 0.5rem;
