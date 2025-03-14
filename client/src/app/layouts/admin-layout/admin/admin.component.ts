@@ -25,6 +25,10 @@ export class AdminComponent implements OnInit {
     make: '',
     model: '',
     year: 0,
+    price: 0,
+    milage: 0,
+    vin: '',
+    status: '',
     images: [],
   };
   // initialize cars array
@@ -50,6 +54,10 @@ export class AdminComponent implements OnInit {
     year: new FormControl(),
     make: new FormControl(''),
     model: new FormControl(''),
+    price: new FormControl(),
+    milage: new FormControl(),
+    vin: new FormControl(''),
+    status: new FormControl(''),
     images: new FormControl([]),
   });
 
@@ -66,15 +74,21 @@ export class AdminComponent implements OnInit {
       reader.readAsDataURL(file);
     }
   }
-  // car form
+
+  // car form function to add car
   async addCar() {
+    // set car object values
     this.newCar.make = this.carForm.value.make;
     this.newCar.model = this.carForm.value.model;
     this.newCar.year = this.carForm.value.year;
+    this.newCar.price = this.carForm.value.price;
+    this.newCar.milage = this.carForm.value.milage;
+    this.newCar.vin = this.carForm.value.vin;
+    this.newCar.status = this.carForm.value.status;
 
-    console.log(this.newCar);
+    // console.log(this.newCar);
 
-    // send car data to api
+    // send car data to api with service
     await this.carsService.addCar(this.newCar).then((car) => {
       console.log('Added car to database', car);
     });
@@ -85,8 +99,8 @@ export class AdminComponent implements OnInit {
   }
 
   // delete car
-  deleteCar(id: number) {
-    this.carsService.deleteCar(id).then((car) => {
+  async deleteCar(id: number) {
+    await this.carsService.deleteCar(id).then((car) => {
       console.log('Deleted car from database', car);
       // rerender cars list
       this.getCars();

@@ -5,6 +5,10 @@ const carSchema = new mongoose.Schema({
   year: Number,
   make: String,
   model: String,
+  price: Number,
+  milage: Number,
+  vin: String,
+  status: String,
   secureUrls: [],
   publicIds: [],
 });

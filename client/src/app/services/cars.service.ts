@@ -21,6 +21,10 @@ export class CarsService {
       make: car.make,
       model: car.model,
       year: car.year,
+      price: car.price,
+      milage: car.milage,
+      vin: car.vin,
+      status: car.status,
       images: car.images,
     };
     return await fetch(
@@ -34,7 +38,7 @@ export class CarsService {
       }
     );
   }
-
+  // https://backend-production-136c.up.railway.app/api/cars
   async getCar(id: number) {
     let response = await fetch(
       `https://backend-production-136c.up.railway.app/api/cars/${id}`

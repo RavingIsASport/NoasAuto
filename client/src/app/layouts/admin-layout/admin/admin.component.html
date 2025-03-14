@@ -16,6 +16,22 @@
       <label for="model">Model:</label>
       <input type="text" id="model" formControlName="model" required />
 
+      <label for="price">Price:</label>
+      <input type="text" id="price" formControlName="price" required />
+
+      <label for="milage">Milage:</label>
+      <input type="text" id="milage" formControlName="milage" required />
+
+      <label for="vin">VIN:</label>
+      <input type="text" id="vin" formControlName="vin" required />
+
+      <label for="Status">Status of Title:</label>
+      <select id="status" formControlName="status" required>
+        <option value="clean">Clean</option>
+        <option value="salvage">Salvage</option>
+        <option value="rebuilt">Rebuilt</option>
+      </select>
+
       <label for="images">Upload images:</label>
       <input
         type="file"

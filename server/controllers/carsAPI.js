@@ -31,7 +31,7 @@ router
   })
   .post("/", async (req, res) => {
     // get the car details from the request body
-    let { year, make, model, images } = req.body;
+    let { year, make, model, price, milage, vin, status, images } = req.body;
     console.log("Car received", year, make, model);
 
     // if no images are received, return a 400 error
@@ -63,9 +63,14 @@ router
         year,
         make,
         model,
+        price,
+        milage,
+        vin,
+        status,
         secureUrls,
         publicIds,
       });
+
       res.status(201).send(car);
     } catch (err) {
       res.status(400).send(err.message);
