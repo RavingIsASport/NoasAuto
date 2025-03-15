@@ -1,1 +1,36 @@
-<p>{{ car.year }} {{ car.make }} {{ car.model }}</p>
+<section class="car-details">
+  <div class="car-image">
+    <img
+      src="{{ car.publicIds[0] }}"
+      alt="{{ car.year }} {{ car.make }} {{ car.model }}"
+    />
+  </div>
+
+  <div class="car-info">
+    <h2>
+      {{ car.year }} {{ car.make | titlecase }} {{ car.model | titlecase }}
+    </h2>
+    <p class="price">{{ car.price | currency }}</p>
+
+    <!-- Specifications -->
+    <ul class="car-specs">
+      <li><strong>Mileage:</strong> {{ car.milage | number }}</li>
+      <li><strong>VIN:</strong> {{ car.vin }}</li>
+      <li><strong>Transmission:</strong> Automatic</li>
+      <li><strong>Fuel Type</strong> Electric</li>
+      <li><strong>Drivetrain:</strong> AWD</li>
+    </ul>
+
+    <div class="car-status">
+      <p>Status of Title</p>
+      <p class="status">
+        <strong>{{ car.status | titlecase }}</strong>
+      </p>
+    </div>
+
+    <!-- Call-to-Action Buttons -->
+    <div class="car-actions">
+      <a [routerLink]="['/contact']" class="btn primary-btn">Inquire Now</a>
+    </div>
+  </div>
+</section>

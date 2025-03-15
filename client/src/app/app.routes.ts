@@ -13,6 +13,7 @@ import { HomeComponent } from './layouts/main-layout/home/home.component';
 import { InventoryComponent } from './layouts/main-layout/inventory/inventory.component';
 import { ContactComponent } from './layouts/main-layout/contact/contact.component';
 import { CarPageComponent } from './layouts/main-layout/car-page/car-page.component';
+import { FinanceComponent } from './layouts/main-layout/finance/finance.component';
 
 export const routes: Routes = [
   {
@@ -27,19 +28,27 @@ export const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent,
+        title: 'Noas Auto Sales | Home',
       },
       {
         path: 'inventory',
         component: InventoryComponent,
+        title: 'Noas Auto Sales | Inventory',
       },
       {
         path: 'inventory/:id',
         component: CarPageComponent,
+        title: 'Noas Auto Sales | Car',
       },
-
+      {
+        path: 'finance',
+        component: FinanceComponent,
+        title: 'Noas Auto Sales | Finance',
+      },
       {
         path: 'contact',
         component: ContactComponent,
+        title: 'Noas Auto Sales | Contact',
       },
     ],
   },
@@ -48,8 +57,17 @@ export const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'home', component: AdminComponent, canActivate: [AuthGuard] },
+      {
+        path: 'login',
+        component: LoginComponent,
+        title: 'Noas Auto Sales | Admin',
+      },
+      {
+        path: 'home',
+        component: AdminComponent,
+        canActivate: [AuthGuard],
+        title: 'Noas Auto Sales | Admin',
+      },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
     ],
   },

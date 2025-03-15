@@ -1,0 +1,109 @@
+/* Car Details Page */
+.car-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  height: 75vh;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/* Car Image */
+.car-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.car-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Car Info */
+.car-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.car-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #845ec2;
+  margin-bottom: 15px;
+}
+
+/* Car Specifications */
+.car-specs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.car-specs li {
+  font-size: 1.1rem;
+  padding: 16px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.car-status {
+  font-size: 1.7rem;
+  padding: 16px 0;
+  margin: 10px 0;
+}
+.status {
+  color: #845ec2;
+}
+
+/* Call-to-Action Buttons */
+.car-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background-color: #845ec2;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #6c4f8d;
+}
+
+.secondary-btn {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .car-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .car-actions {
+    justify-content: center;
+  }
+}

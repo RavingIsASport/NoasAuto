@@ -28,7 +28,7 @@
 /* Inventory Grid */
 .inventory-list {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -69,7 +69,7 @@
 .view-details-btn {
   margin-top: 10px;
   display: inline-block;
-  background-color: #ff6f61;
+  background-color: #845ec2;
   color: white;
   padding: 10px 15px;
   font-size: 1rem;
@@ -79,5 +79,31 @@
 }
 
 .view-details-btn:hover {
-  background-color: #ff4f3b;
+  background-color: #6c4f8d;
+}
+
+/* mobile view */
+@media screen and (max-width: 500px) {
+  .inventory h2 {
+    font-size: 2rem;
+  }
+  .inventory-list {
+    margin-top: 25%;
+  }
+  .vehicle-card {
+    width: 50%;
+    padding: 15px;
+  }
+  .vehicle-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .vehicle-card p {
+    font-size: 1rem;
+  }
+
+  .view-details-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
 }

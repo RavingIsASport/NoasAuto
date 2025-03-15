@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CarsService } from '../../../services/cars.service';
-import { NgFor } from '@angular/common';
+import { NgFor, TitleCasePipe, CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-inventory',
-  imports: [RouterLink, NgFor],
+  imports: [RouterLink, NgFor, TitleCasePipe, CurrencyPipe],
   templateUrl: './inventory.component.html',
   styleUrl: './inventory.component.css',
 })

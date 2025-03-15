@@ -1,5 +1,5 @@
 <div id="navbar">
-  <h1>Noas Autos</h1>
+  <h1>Noas Auto Sales</h1>
   <button
     mat-mini-fab
     aria-label="Mobile navbar toggle button"
@@ -11,6 +11,7 @@
   <div class="nav-links hidden" #navLinks>
     <a (click)="navToggle()" [routerLink]="['/']">Home</a>
     <a (click)="navToggle()" [routerLink]="['/inventory']">Inventory</a>
+    <a (click)="navToggle()" [routerLink]="['/finance']">Finance</a>
     <a (click)="navToggle()" [routerLink]="['/contact']">Contact</a>
   </div>
 </div>

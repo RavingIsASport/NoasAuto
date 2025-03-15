@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component } from '@angular/core';
+import { TitleCasePipe, CurrencyPipe, DecimalPipe } from '@angular/common';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CarsService } from '../../../services/cars.service';
 
 @Component({
   selector: 'app-car-page',
-  imports: [],
+  imports: [RouterLink, TitleCasePipe, CurrencyPipe, DecimalPipe],
   templateUrl: './car-page.component.html',
   styleUrl: './car-page.component.css',
 })
