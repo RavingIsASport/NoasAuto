@@ -1,0 +1,79 @@
+/* Finance Page */
+.finance-page {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+.finance-header {
+  background-color: #adc5cf;
+  color: #222;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+.finance-header h1 {
+  font-size: 2.2rem;
+}
+
+.finance-header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Financing Options */
+.finance-options {
+  margin-top: 40px;
+}
+
+.finance-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.finance-options li {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.finance-options i {
+  margin-right: 10px;
+  color: #ff6f61;
+}
+
+/* Steps */
+.finance-steps {
+  margin-top: 40px;
+}
+
+.step {
+  padding: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-size: 1.4rem;
+}
+
+/* Call-to-Action */
+.finance-cta {
+  margin-top: 40px;
+  padding: 40px;
+  background: #845ec2;
+  color: white;
+  border-radius: 10px;
+}
+
+.finance-cta h2 {
+  font-size: 2rem;
+}
+
+.finance-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
