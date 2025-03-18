@@ -62,3 +62,10 @@
   padding-top: 10px;
   border-top: 1px solid #444;
 }
+
+/* mobile view */
+@media screen and (max-width: 500px) {
+  .footer-container > div {
+    margin-bottom: 20px;
+  }
+}

@@ -20,7 +20,7 @@
     <div class="vehicleCard">
       <img src="https://placehold.co/600x400" alt="Car 1" />
       <h3>{{ cars[0].year }} {{ cars[0].make }} {{ cars[0].model }}</h3>
-      <p>From $39,990</p>
+      <p>{{ cars[0].price | currency }}</p>
       <a
         [routerLink]="['/inventory/', cars[0]._id]"
         class="btn view-details-btn"
@@ -30,12 +30,40 @@
     <div class="vehicleCard">
       <img src="https://placehold.co/600x400" alt="Car 1" />
       <h3>{{ cars[2].year }} {{ cars[2].make }} {{ cars[2].model }}</h3>
-      <p>From $39,990</p>
+      <p>{{ cars[2].price | currency }}</p>
       <a
         [routerLink]="['/inventory/', cars[2]._id]"
         class="btn view-details-btn"
         >View Details</a
       >
+    </div>
+  </div>
+</div>
+
+<!--Section why choose us-->
+<div class="chooseUsMain">
+  <h2 class="chooseUsTitle">Why Choose Us?</h2>
+  <div class="chooseUsCards">
+    <div class="chooseUsCard">
+      <mat-icon class="mat-icon">garage</mat-icon>
+      <h3>Quality Vehicles</h3>
+      <p>We offer a wide selection of quality vehicles at unbeatable prices.</p>
+    </div>
+    <div class="chooseUsCard">
+      <mat-icon class="mat-icon">handshake</mat-icon>
+      <h3>Great Service</h3>
+      <p>
+        Our friendly and knowledgeable staff are here to help you every step of
+        the way.
+      </p>
+    </div>
+    <div class="chooseUsCard">
+      <mat-icon class="mat-icon">payments</mat-icon>
+      <h3>Financing Options</h3>
+      <p>
+        We offer a variety of financing options to help you get behind the wheel
+        of your dream car.
+      </p>
     </div>
   </div>
 </div>

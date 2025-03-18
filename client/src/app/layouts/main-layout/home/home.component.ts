@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CurrencyPipe } from '@angular/common';
 import { CarsService } from '../../../services/cars.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, CurrencyPipe, MatIconModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

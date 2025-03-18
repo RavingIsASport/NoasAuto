@@ -3,7 +3,7 @@
   background: #adc5cf; /* Replace with your image URL */
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,6 +80,7 @@
   margin-bottom: 40px;
 }
 .featuredCars .vehicleCards {
+  margin: 100px auto;
   display: flex;
   gap: 20px;
   justify-content: space-around;
@@ -140,4 +141,46 @@
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+}
+
+/* Choose Us section */
+.chooseUsMain {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #845ec2;
+}
+
+.chooseUsMain h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.chooseUsMain .chooseUsCards {
+  display: flex;
+  margin: 100px auto;
+  width: 60%;
+  gap: 60px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.chooseUsCard {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.chooseUsCard:hover {
+  transform: translateY(-5px);
+}
+.chooseUsCard .mat-icon {
+  font-size: 5rem;
+  color: #6c4f8d;
+  margin: 20px 0;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
