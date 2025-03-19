@@ -26,6 +26,7 @@
 /* Financing Options */
 .finance-options {
   margin-top: 40px;
+  margin: 100px 0;
 }
 
 .finance-options ul {
@@ -34,16 +35,18 @@
 }
 
 .finance-options li {
-  font-size: 1.2rem;
-  padding: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 15px;
   border-bottom: 1px solid #ddd;
 }
-
-.finance-options i {
+mat-icon {
+  font-size: 2.5rem;
+  color: #845ec2;
   margin-right: 10px;
-  color: #ff6f61;
+  width: 5%;
+  height: 5%;
 }
-
 /* Steps */
 .finance-steps {
   margin-top: 40px;
@@ -76,4 +79,49 @@
 .finance-cta p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 500px) {
+  .finance-page {
+    padding: 100px 20px;
+  }
+
+  .finance-header {
+    padding: 60px 20px;
+  }
+
+  .finance-header h1 {
+    font-size: 3rem;
+  }
+
+  .finance-header p {
+    font-size: 1.5rem;
+  }
+
+  .finance-options {
+    margin: 100px 0;
+  }
+
+  .finance-options li {
+    font-size: 1.2rem;
+    padding: 20px;
+    font-weight: 500;
+  }
+  mat-icon {
+    font-size: 2rem;
+    width: 10%;
+    height: 5%;
+  }
+
+  .step h3 {
+    font-size: 1.6rem;
+  }
+
+  .finance-cta h2 {
+    font-size: 2.5rem;
+  }
+
+  .finance-cta p {
+    font-size: 1.4rem;
+  }
 }
