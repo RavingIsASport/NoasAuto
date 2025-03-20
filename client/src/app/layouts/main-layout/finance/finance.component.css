@@ -43,9 +43,8 @@
 mat-icon {
   font-size: 2.5rem;
   color: #845ec2;
-  margin-right: 10px;
-  width: 5%;
-  height: 5%;
+  width: auto;
+  height: auto;
 }
 /* Steps */
 .finance-steps {
