@@ -5,9 +5,13 @@
   gap: 20px;
   padding: 60px 20px;
   max-width: 1200px;
-  height: 75vh;
   margin: 0 auto;
   align-items: center;
+}
+
+/* Remove height for flexibility */
+.car-details {
+  height: auto;
 }
 
 /* Car Image */
@@ -20,6 +24,8 @@
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  max-width: 100%;
 }
 
 /* Car Info */
@@ -68,7 +74,10 @@
   gap: 15px;
 }
 
-.primary-btn {
+.primary-btn,
+.secondary-btn {
+  width: auto;
+  max-width: 300px;
   background-color: #845ec2;
   color: white;
   padding: 12px 20px;
@@ -76,6 +85,8 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: inline-block;
 }
 
 .primary-btn:hover {
@@ -84,38 +95,83 @@
 
 .secondary-btn {
   background-color: #333;
-  color: white;
-  padding: 12px 20px;
-  font-size: 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
 }
 
 .secondary-btn:hover {
   background-color: #000;
 }
 
-/* Responsive Design */
-@media (max-width: 500px) {
+/* Tablet Responsive Design */
+@media (max-width: 768px) {
   .car-details {
     flex-direction: column;
+    gap: 30px;
+    padding: 40px 10px;
     text-align: center;
   }
-
+  .car-image,
+  .car-info {
+    min-width: 0;
+    width: 100%;
+  }
   .car-info h2 {
     font-size: 1.5rem;
   }
   .price {
-    font-size: 1.5rem;
-  }
-  .car-status {
-    font-size: 1.5rem;
-  }
-  .status {
     font-size: 1.3rem;
   }
+  .car-status {
+    font-size: 1.2rem;
+  }
+  .status {
+    font-size: 1.1rem;
+  }
   .car-actions {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 500px) {
+  .car-details {
+    padding: 20px 2vw;
+    gap: 20px;
+  }
+  .car-image,
+  .car-info {
+    min-width: 0;
+    width: 80%;
+  }
+  .car-info h2 {
+    font-size: 1.1rem;
+  }
+  .price {
+    font-size: 1rem;
+  }
+  .car-specs li {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+  .car-status {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+  .status {
+    font-size: 0.95rem;
+  }
+  .car-actions {
+    gap: 8px;
+  }
+  .primary-btn,
+  .secondary-btn {
+    font-size: 1rem;
+    padding: 12px 0;
   }
 }
