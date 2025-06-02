@@ -31,7 +31,18 @@ router
   })
   .post("/", async (req, res) => {
     // get the car details from the request body
-    let { year, make, model, price, milage, vin, status, images } = req.body;
+    let {
+      make,
+      model,
+      year,
+      milage,
+      color,
+      cashPrice,
+      financePrice,
+      downPayment,
+      status,
+      images,
+    } = req.body;
     console.log("Car received", year, make, model);
 
     // if no images are received, return a 400 error
@@ -60,12 +71,14 @@ router
     // insert the car details into the database
     try {
       let car = await Car.create({
-        year,
         make,
         model,
-        price,
+        year,
         milage,
-        vin,
+        color,
+        cashPrice,
+        financePrice,
+        downPayment,
         status,
         secureUrls,
         publicIds,

@@ -1,136 +1,162 @@
-header {
-  padding: 10px 20px;
-  background-color: #3596b5;
-  color: white;
+.header {
   display: flex;
   justify-content: space-between;
-}
-#logoutBtn {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  width: 5%;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 5px;
-}
-#logoutBtn:hover {
-  background-color: #adc5cf;
-  color: white;
-}
-#manager {
-  margin-top: 20px;
-  padding: 5px 20px;
-}
-#carFile {
-  font-weight: 700;
-  margin: 10px 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-#adminMain {
-  padding: 0px 20px;
-  margin: 10px 0px;
-}
-#addCarForm {
-  display: flex;
-  gap: 10px;
-  width: 100%;
-}
-#addCar {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  gap: 10px;
   align-items: center;
-}
-label {
-  font-size: 16px;
-  font-weight: 700;
-  width: 50%;
-  align-self: auto;
-}
-input {
-  padding: 5px;
-  font-size: 16px;
-  width: 50%;
-}
-button {
-  padding: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  width: 20%;
   background-color: #3596b5;
-  color: white;
-  border: none;
-  cursor: pointer;
-  align-self: end;
-}
-button:hover {
-  background-color: #adc5cf;
-  color: black;
-}
-#adminH3 {
-  margin-top: 20px;
-  text-align: center;
-}
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px;
-}
-td,
-th {
-  border: 1px solid black;
-  padding: 5px;
+  color: #fff;
+  padding: 10px 20px;
 }
 
-td {
-  text-align: center;
+.logout-btn {
+  background-color: #ffffff;
+  color: #000;
+  cursor: pointer;
   font-weight: 500;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
-#deleteBtn {
+
+.logout-btn:hover {
+  background-color: #adc5cf;
+  color: #fff;
+}
+
+.manager-greeting {
+  margin: 20px 0;
+  padding: 0 20px;
+}
+
+.admin-main {
+  padding: 0 20px;
+}
+
+.add-car-container {
+  margin-bottom: 20px;
+}
+
+.add-car-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+}
+
+.form-group label {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.uploaded-files-container {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.uploaded-files-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 5px 0 0 0;
+}
+
+.uploaded-files-list li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: #3596b5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.submit-btn:hover {
+  background-color: #adc5cf;
+  color: #000;
+}
+
+.admin-heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.car-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.car-table th,
+.car-table td {
+  border: 1px solid #000;
+  padding: 5px;
+  text-align: center;
+}
+
+.delete-btn {
   background-color: #d70010;
-  margin-left: 10px;
-  color: #ffff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
-#deleteBtn:hover {
+
+.delete-btn:hover {
   background-color: #ff0000;
 }
 
-/* mobile view */
+/* Responsive Styles */
 @media screen and (max-width: 500px) {
-  #addCarForm {
+  .header {
     flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  #addCar {
-    width: 60%;
-    justify-content: flex-start;
+
+  .manager-greeting {
+    font-size: 1rem;
+    margin: 15px 0;
   }
-  label {
+
+  .add-car-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .add-car-form {
     width: 100%;
   }
-  input {
+
+  .submit-btn {
     width: 100%;
+    margin-top: 10px;
   }
-  #addCar select {
-    width: 50%;
-    font-size: 1.15rem;
-    cursor: pointer;
-  }
-  button {
-    width: 40%;
-    align-self: flex-start;
-    margin: 1rem 0;
-  }
-  #deleteBtn {
-    width: 55%;
-    margin: 4px;
-  }
-  #logoutBtn {
-    padding: 0.5rem;
-    width: 15%;
+
+  .logout-btn {
+    align-self: flex-end;
+    width: 20%;
     font-size: 14px;
+  }
+
+  .car-table th,
+  .car-table td {
+    font-size: 12px;
+    padding: 8px;
   }
 }

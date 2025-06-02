@@ -21,9 +21,11 @@ export class CarsService {
       make: car.make,
       model: car.model,
       year: car.year,
-      price: car.price,
       milage: car.milage,
-      vin: car.vin,
+      color: car.color,
+      cashPrice: car.cashPrice,
+      financePrice: car.financePrice,
+      downPayment: car.downPayment,
       status: car.status,
       images: car.images,
     };

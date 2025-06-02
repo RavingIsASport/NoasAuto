@@ -2,9 +2,11 @@ interface Car {
   make: string;
   model: string;
   year: number;
-  price: number;
+  cashPrice: number;
+  financePrice: number;
+  downPayment: number;
+  color: string;
   milage: number;
-  vin: string;
   status: string;
   images: any[];
 }

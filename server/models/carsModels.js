@@ -2,12 +2,14 @@ import mongoose from "mongoose";
 
 // Define the schema
 const carSchema = new mongoose.Schema({
-  year: Number,
   make: String,
   model: String,
-  price: Number,
+  year: Number,
   milage: Number,
-  vin: String,
+  color: String,
+  cashPrice: Number,
+  financePrice: Number,
+  downPayment: Number,
   status: String,
   secureUrls: [],
   publicIds: [],

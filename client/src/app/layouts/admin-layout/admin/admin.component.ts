@@ -25,9 +25,11 @@ export class AdminComponent implements OnInit {
     make: '',
     model: '',
     year: 0,
-    price: 0,
     milage: 0,
-    vin: '',
+    color: '',
+    cashPrice: 0,
+    financePrice: 0,
+    downPayment: 0,
     status: '',
     images: [],
   };
@@ -54,9 +56,11 @@ export class AdminComponent implements OnInit {
     year: new FormControl(),
     make: new FormControl(''),
     model: new FormControl(''),
-    price: new FormControl(),
     milage: new FormControl(),
-    vin: new FormControl(''),
+    color: new FormControl(''),
+    cashPrice: new FormControl(),
+    financePrice: new FormControl(),
+    downPayment: new FormControl(),
     status: new FormControl(''),
     images: new FormControl([]),
   });
@@ -81,9 +85,11 @@ export class AdminComponent implements OnInit {
     this.newCar.make = this.carForm.value.make;
     this.newCar.model = this.carForm.value.model;
     this.newCar.year = this.carForm.value.year;
-    this.newCar.price = this.carForm.value.price;
     this.newCar.milage = this.carForm.value.milage;
-    this.newCar.vin = this.carForm.value.vin;
+    this.newCar.color = this.carForm.value.color;
+    this.newCar.cashPrice = this.carForm.value.cashPrice;
+    this.newCar.financePrice = this.carForm.value.financePrice;
+    this.newCar.downPayment = this.carForm.value.downPayment;
     this.newCar.status = this.carForm.value.status;
 
     // console.log(this.newCar);
