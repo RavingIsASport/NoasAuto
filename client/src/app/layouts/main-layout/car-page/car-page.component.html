@@ -16,11 +16,20 @@
 
     <!-- Specifications -->
     <ul class="car-specs">
+      <li><strong>Color:</strong> {{ car.color }}</li>
       <li><strong>Mileage:</strong> {{ car.milage | number }}</li>
-      <li><strong>VIN:</strong> {{ car.vin }}</li>
-      <li><strong>Transmission:</strong> Automatic</li>
-      <li><strong>Fuel Type</strong> Electric</li>
-      <li><strong>Drivetrain:</strong> AWD</li>
+      <li>
+        <strong>Cash Price:</strong> {{ car.cashPrice | currency }}
+        <br />
+        <br />
+        <strong>Or</strong>
+        <br />
+        <br />
+        <strong>Finance Price:</strong> {{ car.financePrice | currency }}
+        <br />
+        <br />
+        <strong>Down Payment:</strong> {{ car.downPayment | currency }}
+      </li>
     </ul>
 
     <div class="car-status">
