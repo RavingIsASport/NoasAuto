@@ -12,27 +12,38 @@
     <h2>
       {{ car.year }} {{ car.make | titlecase }} {{ car.model | titlecase }}
     </h2>
-    <p class="price">{{ car.price | currency }}</p>
+    <p class="price">{{ car.cashPrice | currency }}</p>
 
     <!-- Specifications -->
     <ul class="car-specs">
       <li><strong>Color:</strong> {{ car.color }}</li>
       <li><strong>Mileage:</strong> {{ car.milage | number }}</li>
-      <li>
-        <strong>Cash Price:</strong> {{ car.cashPrice | currency }}
-        <br />
-        <br />
-        <strong>Or</strong>
-        <br />
-        <br />
-        <strong>Finance Price:</strong> {{ car.financePrice | currency }}
-        <br />
-        <br />
-        <strong>Down Payment:</strong> {{ car.downPayment | currency }}
-      </li>
     </ul>
 
-    <div class="car-status">
+    <!-- Pricing Section -->
+    <div class="pricing-section">
+      <h3>Pricing Options</h3>
+      <div class="pricing-options">
+        <div class="pricing-option cash">
+          <h4>Cash Price</h4>
+          <p class="amount">{{ car.cashPrice | currency }}</p>
+        </div>
+
+        <div class="pricing-divider">
+          <span>OR</span>
+        </div>
+
+        <div class="pricing-option finance">
+          <h4>Finance Option</h4>
+          <p class="amount">{{ car.financePrice | currency }}</p>
+          <p class="down-payment">
+            Down Payment: {{ car.downPayment | currency }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="car-status" [ngClass]="car.status">
       <p>Status of Title</p>
       <p class="status">
         <strong>{{ car.status | titlecase }}</strong>
