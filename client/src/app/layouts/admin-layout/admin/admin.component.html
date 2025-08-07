@@ -81,9 +81,9 @@
           type="file"
           id="images"
           name="images"
-          formControlName="images"
           (change)="fileChange($event)"
           multiple
+          accept="image/*"
         />
         <div class="uploaded-files-container" *ngIf="newCar.images?.length">
           <p>Uploaded files:</p>
