@@ -14,7 +14,15 @@
   <div class="inventory-list">
     <div class="vehicle-card" *ngFor="let car of cars">
       <img
+        *ngIf="car.publicIds.length === 0"
         src="https://placehold.co/600x400?text=Image\nComing\nSoon"
+        alt="{{ car.make }} {{ car.model }}"
+      />
+      <img
+        *ngIf="car.publicIds.length > 0"
+        src="https://res.cloudinary.com/dltfiariz/image/upload/{{
+          car.publicIds[5]
+        }}.jpg"
         alt="{{ car.make }} {{ car.model }}"
       />
       <h3>

@@ -99,7 +99,9 @@ router
     // push the public Ids of the images into an array
     // delete the images from cloudinary
     try {
-      await cloudinary.api.delete_resources(car.publicIds);
+      if (car.publicIds && car.publicIds.length > 0) {
+        await cloudinary.api.delete_resources(car.publicIds);
+      }
     } catch (err) {
       return res.status(400).json({ error: err.message });
     }
