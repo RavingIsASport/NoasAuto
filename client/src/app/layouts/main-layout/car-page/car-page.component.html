@@ -1,8 +1,14 @@
 <section class="car-details">
   <div class="car-image">
     <img
+      *ngIf="car.publicIds.length === 0"
+      src="https://placehold.co/600x400?text=Image\nComing\nSoon"
+      alt="{{ car.make }} {{ car.model }}"
+    />
+    <img
+      *ngIf="car.publicIds.length > 0"
       src="https://res.cloudinary.com/dltfiariz/image/upload/{{
-        car.publicIds[1]
+        car.publicIds[0]
       }}.jpg"
       alt="{{ car.year }} {{ car.make }} {{ car.model }}"
     />

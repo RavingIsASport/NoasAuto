@@ -11,7 +11,10 @@
   </div> -->
 
   <!-- Vehicle List -->
-  <div class="inventory-list">
+  <div *ngIf="!cars.length" class="no-inventory">
+    <p>No cars available at this time. Please check back later.</p>
+  </div>
+  <div *ngIf="cars.length > 0" class="inventory-list">
     <div class="vehicle-card" *ngFor="let car of cars">
       <img
         *ngIf="car.publicIds.length === 0"
@@ -21,7 +24,7 @@
       <img
         *ngIf="car.publicIds.length > 0"
         src="https://res.cloudinary.com/dltfiariz/image/upload/{{
-          car.publicIds[5]
+          car.publicIds[0]
         }}.jpg"
         alt="{{ car.make }} {{ car.model }}"
       />

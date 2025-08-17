@@ -3,6 +3,7 @@
   padding: 60px 20px;
   text-align: center;
   background-color: #f8f8f8;
+  height: 70vh;
 }
 
 .inventory h2 {
@@ -23,6 +24,17 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
+}
+
+/* No Inventory */
+.no-inventory {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  color: #721c24;
+  font-size: 1.2rem;
 }
 
 /* Inventory Grid */

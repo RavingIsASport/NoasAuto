@@ -4,13 +4,21 @@ import {
   CurrencyPipe,
   DecimalPipe,
   NgClass,
+  NgIf,
 } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CarsService } from '../../../services/cars.service';
 
 @Component({
   selector: 'app-car-page',
-  imports: [RouterLink, TitleCasePipe, CurrencyPipe, DecimalPipe, NgClass],
+  imports: [
+    RouterLink,
+    TitleCasePipe,
+    CurrencyPipe,
+    NgIf,
+    DecimalPipe,
+    NgClass,
+  ],
   templateUrl: './car-page.component.html',
   styleUrl: './car-page.component.css',
 })
