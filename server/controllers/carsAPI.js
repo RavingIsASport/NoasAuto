@@ -62,6 +62,8 @@ router
         secureUrls.push(result.secure_url);
         publicIds.push(result.public_id);
       }
+      // send success response
+      res.status(200).json({ Success: "Images uploaded successfully" });
     } catch (err) {
       return res.status(400).json({ error: err.message });
     }

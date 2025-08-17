@@ -96,7 +96,7 @@ export class AdminComponent implements OnInit {
 
     // send car data to api with service
     await this.carsService.addCar(this.newCar).then((car) => {
-      console.log('Added car to database', car);
+      console.log({ Success: 'Car added successfully' });
     });
     // reset form fields and rerender cars list
     this.getCars();
@@ -107,7 +107,7 @@ export class AdminComponent implements OnInit {
   // delete car
   async deleteCar(id: number) {
     await this.carsService.deleteCar(id).then((car) => {
-      console.log('Deleted car from database', car);
+      console.log({ Success: 'Car deleted successfully' });
       // rerender cars list
       this.getCars();
     });
