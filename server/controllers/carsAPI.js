@@ -103,7 +103,7 @@ router
         await cloudinary.api.delete_resources(car.publicIds);
       }
     } catch (err) {
-      return res.status(400).json({ error: err.message });
+      return res.status(400).json({ error: "error in deleting images" });
     }
 
     // delete the car from the database
