@@ -29,7 +29,10 @@
     <!-- Pricing Section -->
     <div class="pricing-section">
       <h3>Pricing Options</h3>
-      <div class="pricing-options">
+      <div *ngIf="!car.cashPrice && !car.financePrice" class="no-pricing">
+        <p>Please contact for pricing options.</p>
+      </div>
+      <div *ngIf="car.cashPrice || car.financePrice" class="pricing-options">
         <div class="pricing-option cash">
           <h4>Cash Price</h4>
           <p class="amount">{{ car.cashPrice | currency }}</p>
