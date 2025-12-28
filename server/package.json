@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
+    "dev": "node server.js --watch",
     "create": "node scripts/createUser.js"
   },
   "author": "Gustavo Garcia",

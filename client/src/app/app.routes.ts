@@ -12,7 +12,7 @@ import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './layouts/main-layout/home/home.component';
 import { InventoryComponent } from './layouts/main-layout/inventory/inventory.component';
 import { ContactComponent } from './layouts/main-layout/contact/contact.component';
-import { CarPageComponent } from './layouts/main-layout/car-page/car-page.component';
+import CarPageComponent from './layouts/main-layout/car-page/car-page.component';
 import { FinanceComponent } from './layouts/main-layout/finance/finance.component';
 
 export const routes: Routes = [

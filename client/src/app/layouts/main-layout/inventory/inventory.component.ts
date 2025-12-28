@@ -14,7 +14,7 @@ export class InventoryComponent {
   constructor(private carsService: CarsService) {}
 
   // Initialize cars array
-  cars: any = [];
+  cars: any[] = [];
 
   // get cars from service on initial load
   ngOnInit() {
@@ -24,8 +24,8 @@ export class InventoryComponent {
   // Get cars
   async getCars() {
     await this.carsService.getCars().then((cars) => {
+      console.log('Cars fetched successfully:');
       this.cars = cars;
-      console.log(this.cars[0].publicIds.length);
     });
   }
 }

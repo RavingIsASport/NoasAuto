@@ -11,7 +11,7 @@ router
 
     // if no cars are found, return a 404 error
     if (cars.length === 0) {
-      return res.send({ message: "No cars found" });
+      return res.send({ ErrorMessage: "No cars found" });
     }
     res.json(cars);
   })

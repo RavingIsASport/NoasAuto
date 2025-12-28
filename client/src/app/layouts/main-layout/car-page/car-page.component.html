@@ -8,10 +8,49 @@
     <img
       *ngIf="car.publicIds.length > 0"
       src="https://res.cloudinary.com/dltfiariz/image/upload/{{
-        car.publicIds[0]
+        car.publicIds[imgIndex]
       }}.jpg"
       alt="{{ car.year }} {{ car.make }} {{ car.model }}"
     />
+    <div *ngIf="car.publicIds.length > 0" class="img-controls">
+      <button aria-label="Previous image" (click)="imgViews('prev')">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M15 18L9 12L15 6"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+
+      <button aria-label="Next image" (click)="imgViews('next')">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path
+            d="M9 6L15 12L9 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 
   <div class="car-info">
